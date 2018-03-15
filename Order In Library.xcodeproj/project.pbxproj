@@ -14,6 +14,7 @@
 		3F66AE36204D8A1400F582B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F66AE34204D8A1400F582B0 /* LaunchScreen.storyboard */; };
 		3F66AE41204D8A1400F582B0 /* Order_In_LibraryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F66AE40204D8A1400F582B0 /* Order_In_LibraryTests.swift */; };
 		3F66AE4C204D8A1400F582B0 /* Order_In_LibraryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F66AE4B204D8A1400F582B0 /* Order_In_LibraryUITests.swift */; };
+		3FA63F5820595E010006DF74 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA63F5720595E010006DF74 /* Book.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		3F66AE47204D8A1400F582B0 /* Order In LibraryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Order In LibraryUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F66AE4B204D8A1400F582B0 /* Order_In_LibraryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order_In_LibraryUITests.swift; sourceTree = "<group>"; };
 		3F66AE4D204D8A1400F582B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FA63F5720595E010006DF74 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		3F66AE1F204D8A1300F582B0 = {
 			isa = PBXGroup;
 			children = (
+				3FA63F5720595E010006DF74 /* Book.swift */,
 				3F66AE2A204D8A1400F582B0 /* Order In Library */,
 				3F66AE3F204D8A1400F582B0 /* Order In LibraryTests */,
 				3F66AE4A204D8A1400F582B0 /* Order In LibraryUITests */,
@@ -261,6 +264,7 @@
 			files = (
 				3F66AE2E204D8A1400F582B0 /* ViewController.swift in Sources */,
 				3F66AE2C204D8A1400F582B0 /* AppDelegate.swift in Sources */,
+				3FA63F5820595E010006DF74 /* Book.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
