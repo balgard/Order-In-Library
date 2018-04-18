@@ -10,6 +10,7 @@ import UIKit
 
 class SortingViewController: UIViewController
 {
+    @IBOutlet weak var backgroundView: UIView!
     @IBOutlet weak var bookOneLabel: UILabel!
     @IBOutlet weak var bookTwoLabel: UILabel!
     @IBOutlet weak var bookThreeLabel: UILabel!
@@ -19,6 +20,9 @@ class SortingViewController: UIViewController
     @IBOutlet weak var bookForSorting: Book!
     
     var bookTitles = [String]()
+    var currentPosition = 0
+    var boxesArray = [UILabel]()
+    var wrongAnswers = 0
     
     override func viewDidLoad()
     {
@@ -37,6 +41,13 @@ class SortingViewController: UIViewController
         bookFiveLabel.text = "800"
         bookSixLabel.text = "900"
         
+        boxesArray.append(bookOneLabel)
+        boxesArray.append(bookTwoLabel)
+        boxesArray.append(bookThreeLabel)
+        boxesArray.append(bookFourLabel)
+        boxesArray.append(bookFiveLabel)
+        boxesArray.append(bookSixLabel)
+        
         //fixed names for books
         bookTitles.append("F\nOAK")
         bookTitles.append("B\nBRE")
@@ -51,34 +62,101 @@ class SortingViewController: UIViewController
         
         bookForSorting.update(newID: bookTitles[0])
     }
-
-  
+    
+    
     @IBAction func whenTapped(_ sender: UITapGestureRecognizer)
     {
-        var selectedPoint = sender.location(in: self.view)
-        if bookOneLabel.frame.contains(selectedPoint)
+        for box in boxesArray
         {
-            bookOneLabel.text = "One"
+            if box.frame.contains(sender.location(in: backgroundView))
+            {
+                var boxText = String(box.text!.prefix(1))
+                var bookText =  String(bookTitles[currentPosition].prefix(1))
+                if boxText == bookText
+                {
+                    if currentPosition == 9
+                    {
+                        if wrongAnswers <= 3
+                        {
+                            let alert = UIAlertController(title: "Certified", message: nil, preferredStyle: .alert)
+                            let alertMessage = UIAlertAction(title: "new game", style: .default)
+                            {
+                                (action) -> Void in self.performSegue(withIdentifier: "unwindToLevel", sender: self)
+                            }
+                            alert.addAction(alertMessage)
+                            present(alert, animated: true, completion: nil)
+                        }
+                        else
+                        {
+                            let alert = UIAlertController(title: "Try Again", message: nil, preferredStyle: .alert)
+                            let alertMessage = UIAlertAction(title: "Restart", style: .default)
+                            {
+                                (action) -> Void in self.restartGame()
+                            }
+                            
+                            let alertMes = UIAlertAction(title: "New Game", style: .default)
+                            {
+                                (action) -> Void in self.performSegue(withIdentifier: "unwindToLevel", sender: self)
+                            }
+                            alert.addAction(alertMessage)
+                            alert.addAction(alertMes)
+                            present(alert, animated: true, completion: nil)
+                        }
+                    }
+                    else
+                    {
+                        tapHelper()
+                    }
+                }
+                else
+                {
+                    wrongAnswers += 1
+                }
+            }
         }
-        else if bookTwoLabel.frame.contains(selectedPoint)
-        {
-            bookTwoLabel.text = "Two"
-        }
-        else if bookThreeLabel.frame.contains(selectedPoint)
-        {
-            bookThreeLabel.text = "Three"
-        }
-        else if bookFourLabel.frame.contains(selectedPoint)
-        {
-            bookFourLabel.text = "Four"
-        }
-        else if bookFiveLabel.frame.contains(selectedPoint)
-        {
-            bookFiveLabel.text = "Five"
-        }
-        else if bookSixLabel.frame.contains(selectedPoint)
-        {
-            bookSixLabel.text = "Six"
-        }
+        
+        
+        /*var selectedPoint = sender.location(in: self.view)
+         if bookOneLabel.frame.contains(selectedPoint)
+         {
+         if (bookForSorting.id == bookOneLabel.text)
+         {
+         bookOneLabel.text = "One"
+         }
+         }
+         else if bookTwoLabel.frame.contains(selectedPoint)
+         {
+         bookTwoLabel.text = "Two"
+         }
+         else if bookThreeLabel.frame.contains(selectedPoint)
+         {
+         bookThreeLabel.text = "Three"
+         }
+         else if bookFourLabel.frame.contains(selectedPoint)
+         {
+         bookFourLabel.text = "Four"
+         }
+         else if bookFiveLabel.frame.contains(selectedPoint)
+         {
+         bookFiveLabel.text = "Five"
+         }
+         else if bookSixLabel.frame.contains(selectedPoint)
+         {
+         bookSixLabel.text = "Six"
+         }*/
     }
+    
+    func tapHelper()
+    {
+        currentPosition = currentPosition + 1
+        bookForSorting.update(newID: bookTitles[currentPosition])
+        
+    }
+    
+    func restartGame()
+    {
+        currentPosition = 0
+        wrongAnswers = 0
+    }
+    
 }

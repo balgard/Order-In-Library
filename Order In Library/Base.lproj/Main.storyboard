@@ -167,6 +167,9 @@
                                 <rect key="frame" x="27" y="540" width="45" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Expert"/>
+                                <connections>
+                                    <segue destination="Wuc-nE-dso" kind="show" id="BkP-jz-n37"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -176,6 +179,88 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="chq-Ky-ik5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="900" y="124.58770614692655"/>
+        </scene>
+        <!--Reorder View Controller-->
+        <scene sceneID="dRH-G8-qk4">
+            <objects>
+                <viewController id="Wuc-nE-dso" customClass="ReorderViewController" customModule="Order_In_Library" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CNt-4i-l5y">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hZW-Zb-1ZR">
+                                <rect key="frame" x="44" y="274" width="51" height="119"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.30706452074884449" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RK7-ls-hlt">
+                                <rect key="frame" x="103" y="274" width="51" height="119"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.029773705383607685" green="0.98412315346004253" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M2H-ZM-h7d">
+                                <rect key="frame" x="162" y="274" width="51" height="119"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.99775086750525865" green="0.043745372366766677" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qsv-dh-vq2">
+                                <rect key="frame" x="221" y="274" width="51" height="119"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vdl-Gz-heE">
+                                <rect key="frame" x="280" y="274" width="51" height="119"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vTg-8p-CnN">
+                                <rect key="frame" x="165" y="483" width="44" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Check"/>
+                                <connections>
+                                    <action selector="checkButton:" destination="Wuc-nE-dso" eventType="touchUpInside" id="dkF-Ee-gHF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
+                        <viewLayoutGuide key="safeArea" id="caW-Wc-swz"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="eH1-QH-Vid" appends="YES" id="2ll-vN-I4c"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="bookFour" destination="vdl-Gz-heE" id="wiJ-I3-44Z"/>
+                        <outlet property="bookOne" destination="RK7-ls-hlt" id="VLe-ST-aHb"/>
+                        <outlet property="bookThree" destination="qsv-dh-vq2" id="D5w-SC-fxM"/>
+                        <outlet property="bookTwo" destination="M2H-ZM-h7d" id="GU8-c1-Msn"/>
+                        <outlet property="bookZero" destination="hZW-Zb-1ZR" id="CK3-pY-KOP"/>
+                        <segue destination="aVc-lQ-Mk2" kind="show" identifier="unwindToLevel" id="se1-qQ-psO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V0K-37-a5q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="eH1-QH-Vid">
+                    <connections>
+                        <action selector="onTapped:" destination="Wuc-nE-dso" id="GIX-u2-uyx"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="900" y="840.62968515742136"/>
         </scene>
         <!--Sorting View Controller-->
         <scene sceneID="dRo-O3-Ane">
@@ -257,6 +342,7 @@
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="backgroundView" destination="iyM-RK-xaj" id="qhn-IH-59k"/>
                         <outlet property="bookFiveLabel" destination="Y0X-6Q-s1S" id="41L-HG-nBf"/>
                         <outlet property="bookForSorting" destination="9hG-lo-P2H" id="8Zh-Yb-HqW"/>
                         <outlet property="bookFourLabel" destination="aXx-Su-D43" id="tLN-rB-wcf"/>
@@ -264,6 +350,7 @@
                         <outlet property="bookSixLabel" destination="w43-Fh-ZCF" id="sJJ-Dg-i7g"/>
                         <outlet property="bookThreeLabel" destination="FdR-ob-4qf" id="Kxh-0b-3qI"/>
                         <outlet property="bookTwoLabel" destination="1M9-gf-UR9" id="ui8-8F-zzo"/>
+                        <segue destination="aVc-lQ-Mk2" kind="show" identifier="unwindToLevel" id="ILy-R4-Pe5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E1q-5b-dRL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -277,6 +364,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="MEq-Gu-8BG"/>
+        <segue reference="FNS-lA-aMn"/>
+        <segue reference="se1-qQ-psO"/>
     </inferredMetricsTieBreakers>
 </document>

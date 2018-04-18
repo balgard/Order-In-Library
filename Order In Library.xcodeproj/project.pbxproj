@@ -16,6 +16,7 @@
 		3F66AE41204D8A1400F582B0 /* Order_In_LibraryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F66AE40204D8A1400F582B0 /* Order_In_LibraryTests.swift */; };
 		3F66AE4C204D8A1400F582B0 /* Order_In_LibraryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F66AE4B204D8A1400F582B0 /* Order_In_LibraryUITests.swift */; };
 		3FF20DAD205FEE62000B4662 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF20DAC205FEE62000B4662 /* Book.swift */; };
+		3FFD6FD020877E3A00062055 /* ReorderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFD6FCF20877E3A00062055 /* ReorderViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		3F66AE4B204D8A1400F582B0 /* Order_In_LibraryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order_In_LibraryUITests.swift; sourceTree = "<group>"; };
 		3F66AE4D204D8A1400F582B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FF20DAC205FEE62000B4662 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		3FFD6FCF20877E3A00062055 /* ReorderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReorderViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				3F66AE2F204D8A1400F582B0 /* Main.storyboard */,
 				3FF20DAC205FEE62000B4662 /* Book.swift */,
 				3F1B58962057003A0097659E /* SortingViewController.swift */,
+				3FFD6FCF20877E3A00062055 /* ReorderViewController.swift */,
 				3F66AE32204D8A1400F582B0 /* Assets.xcassets */,
 				3F66AE34204D8A1400F582B0 /* LaunchScreen.storyboard */,
 				3F66AE37204D8A1400F582B0 /* Info.plist */,
@@ -265,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FFD6FD020877E3A00062055 /* ReorderViewController.swift in Sources */,
 				3FF20DAD205FEE62000B4662 /* Book.swift in Sources */,
 				3F66AE2E204D8A1400F582B0 /* ViewController.swift in Sources */,
 				3F66AE2C204D8A1400F582B0 /* AppDelegate.swift in Sources */,
