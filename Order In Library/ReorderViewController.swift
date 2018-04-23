@@ -257,6 +257,14 @@ class ReorderViewController: UIViewController
             }
         }
     }
+    @IBAction func goBackTapped(_ sender: UIButton)
+    {
+        performSegue(withIdentifier: "unwindToLevel", sender: self)
+    }
+    
+    
+    
+    
 }
 
 
