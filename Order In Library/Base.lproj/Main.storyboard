@@ -112,10 +112,10 @@
             </objects>
             <point key="canvasLocation" x="228" y="840.62968515742136"/>
         </scene>
-        <!--View Controller-->
+        <!--Levels View Controller-->
         <scene sceneID="sdY-fc-xtB">
             <objects>
-                <viewController id="aVc-lQ-Mk2" sceneMemberID="viewController">
+                <viewController id="aVc-lQ-Mk2" customClass="LevelsViewController" customModule="Order_In_Library" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CTD-Jv-l4y">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -187,10 +187,22 @@
                                     <segue destination="Wuc-nE-dso" kind="show" id="BkP-jz-n37"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IJy-aQ-EvR">
+                                <rect key="frame" x="201" y="149" width="25" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VHy-xc-Znj">
+                                <rect key="frame" x="201" y="197" width="25" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="xdP-2f-NiZ"/>
                     </view>
+                    <connections>
+                        <outlet property="expertSortCheck" destination="VHy-xc-Znj" id="Dmz-Xb-Y18"/>
+                        <outlet property="noviceSortCheck" destination="IJy-aQ-EvR" id="Et8-C7-bXs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="chq-Ky-ik5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
