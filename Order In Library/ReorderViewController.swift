@@ -21,18 +21,15 @@ import UIKit
 class ReorderViewController: UIViewController
 {
     
-    @IBOutlet weak var bookZero: UILabel!
+    @IBOutlet weak var bookZero: Book!
     
-    @IBOutlet weak var bookOne: UILabel!
+    @IBOutlet weak var bookOne: Book!
     
-    @IBOutlet weak var bookTwo: UILabel!
+    @IBOutlet weak var bookTwo: Book!
     
-    @IBOutlet weak var bookThree: UILabel!
+    @IBOutlet weak var bookThree: Book!
     
-    @IBOutlet weak var bookFour: UILabel!
-    
-    
-    
+    @IBOutlet weak var bookFour: Book!
     
     
     var array = ["0","1","2","3","4"]
@@ -49,27 +46,37 @@ class ReorderViewController: UIViewController
     
     var books = [Book]()
     
-    var tempArray = [UILabel]()
+    var tempArray = [Book]()
     
     override func viewDidLoad()
-        
     {
-        
         super.viewDidLoad()
-        tempArray.append(bookZero)
-        tempArray.append(bookOne)
-        tempArray.append(bookTwo)
-        tempArray.append(bookThree)
-        tempArray.append(bookFour)
+        books.append(bookZero)
+        books.append(bookOne)
+        books.append(bookTwo)
+        books.append(bookThree)
+        books.append(bookFour)
+        fillBookArray()
     }
     
     func fillBookArray()
     {
         //take all book objects and randomize their order, add to books array, move the book to correct position
+        var i = 5
+        while (i > 0)
+        {
+            var randomInt = Int(arc4random_uniform(UInt32(i)))
+            print(randomInt)
+            tempArray.append(books[randomInt])
+            books.remove(at: randomInt)
+            i -= 1
+        }
+        books = tempArray
     }
     
     func createBookNames()
     {
+        
         //Create Alphabet Array, use Random number generator to decide letter, add to title, repeat X2
         //Do this for every book
     }
@@ -79,11 +86,11 @@ class ReorderViewController: UIViewController
     {
         var i = 0
         //optimize with loops
-        arrayCreated = [bookZero.text!, bookOne.text!, bookTwo.text!, bookThree.text!, bookFour.text!]
+        //arrayCreated = [bookZero.text!, bookOne.text!, bookTwo.text!, bookThree.text!, bookFour.text!]
         //remove arrayCreated when fillBookArray is finished
-        for book in tempArray
+        for book in books
         {
-            if (book.text == arrayCreated[i])
+            if (book.id == books[i].id)
             {
                book.backgroundColor = .green
             }
