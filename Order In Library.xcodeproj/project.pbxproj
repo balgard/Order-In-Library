@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F107B4820920610001B6219 /* LevelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F107B4720920610001B6219 /* LevelsViewController.swift */; };
 		3F1B58972057003A0097659E /* SortingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1B58962057003A0097659E /* SortingViewController.swift */; };
 		3F66AE2C204D8A1400F582B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F66AE2B204D8A1400F582B0 /* AppDelegate.swift */; };
 		3F66AE2E204D8A1400F582B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F66AE2D204D8A1400F582B0 /* ViewController.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F107B4720920610001B6219 /* LevelsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelsViewController.swift; sourceTree = "<group>"; };
 		3F1B58962057003A0097659E /* SortingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortingViewController.swift; sourceTree = "<group>"; };
 		3F66AE28204D8A1400F582B0 /* Order In Library.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Order In Library.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F66AE2B204D8A1400F582B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				3F66AE2B204D8A1400F582B0 /* AppDelegate.swift */,
 				3F66AE2D204D8A1400F582B0 /* ViewController.swift */,
 				3F66AE2F204D8A1400F582B0 /* Main.storyboard */,
+				3F107B4720920610001B6219 /* LevelsViewController.swift */,
 				3FF20DAC205FEE62000B4662 /* Book.swift */,
 				3F1B58962057003A0097659E /* SortingViewController.swift */,
 				3FFD6FCF20877E3A00062055 /* ReorderViewController.swift */,
@@ -271,6 +274,7 @@
 				3FFD6FD020877E3A00062055 /* ReorderViewController.swift in Sources */,
 				3FF20DAD205FEE62000B4662 /* Book.swift in Sources */,
 				3F66AE2E204D8A1400F582B0 /* ViewController.swift in Sources */,
+				3F107B4820920610001B6219 /* LevelsViewController.swift in Sources */,
 				3F66AE2C204D8A1400F582B0 /* AppDelegate.swift in Sources */,
 				3F1B58972057003A0097659E /* SortingViewController.swift in Sources */,
 			);
@@ -439,8 +443,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 92U9E939H3;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Order In Library/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "swift.Order-In-Library";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -454,8 +459,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 92U9E939H3;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Order In Library/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "swift.Order-In-Library";
 				PRODUCT_NAME = "$(TARGET_NAME)";

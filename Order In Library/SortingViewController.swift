@@ -6,6 +6,8 @@
 //  Copyright © 2018 Balgard. All rights reserved.
 //
 
+var sortingCompleted = BooleanLiteralType()
+
 import UIKit
 
 class SortingViewController: UIViewController
@@ -84,6 +86,7 @@ class SortingViewController: UIViewController
                                 (action) -> Void in self.performSegue(withIdentifier: "unwindToLevel", sender: self)
                             }
                             alert.addAction(alertMessage)
+                            sortingCompleted = true
                             present(alert, animated: true, completion: nil)
                         }
                         else
@@ -100,6 +103,7 @@ class SortingViewController: UIViewController
                             }
                             alert.addAction(alertMessage)
                             alert.addAction(alertMes)
+                            sortingCompleted = false
                             present(alert, animated: true, completion: nil)
                         }
                     }
