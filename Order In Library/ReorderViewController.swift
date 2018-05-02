@@ -68,15 +68,19 @@ class ReorderViewController: UIViewController
             var randomInt = Int(arc4random_uniform(UInt32(i)))
             print(randomInt)
             tempArray.append(books[randomInt])
+            //tempArray.last?.id = books[randomInt].text!
             books.remove(at: randomInt)
             i -= 1
         }
         books = tempArray
+        for book in books
+        {
+            book.update(newID: book.id)
+        }
     }
     
     func createBookNames()
     {
-        
         //Create Alphabet Array, use Random number generator to decide letter, add to title, repeat X2
         //Do this for every book
     }
