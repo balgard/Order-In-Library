@@ -12,7 +12,7 @@
 
 //
 
-
+var decide = true
 
 import UIKit
 
@@ -48,6 +48,8 @@ class ReorderViewController: UIViewController
     
     var tempArray = [Book]()
     
+    
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -56,7 +58,8 @@ class ReorderViewController: UIViewController
         books.append(bookTwo)
         books.append(bookThree)
         books.append(bookFour)
-        fillBookArray()
+       // fillBookArray()
+        createBookNames()
     }
     
     func fillBookArray()
@@ -83,6 +86,104 @@ class ReorderViewController: UIViewController
     {
         //Create Alphabet Array, use Random number generator to decide letter, add to title, repeat X2
         //Do this for every book
+        let alphArray = ["A","B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+        
+    
+        if (decide == true) //Alphabet
+        {
+            let startingLetterNumber =  Int(arc4random_uniform(26))
+            let startingLetter = alphArray[startingLetterNumber]
+            
+            var alphaLabel = ""
+            var j = 6
+            var temp = ""
+            
+            while j > 1
+            {
+                var i = 3
+                while i > 1
+                {
+                    let nextNumber = Int(arc4random_uniform(26))
+                    temp += alphArray[nextNumber]
+                    i -= 1
+                }
+                alphaLabel = temp
+                temp = ""
+                
+                if(j == 6)
+                {
+                    bookZero.update(newID: startingLetter + alphaLabel)
+                }
+                
+                if(j == 5)
+                {
+                    bookOne.update(newID: startingLetter + alphaLabel)
+                }
+                if(j == 4)
+                {
+                    bookTwo.update(newID: startingLetter + alphaLabel)
+                }
+                if(j == 3)
+                {
+                    bookThree.update(newID: startingLetter + alphaLabel)
+                }
+                if(j == 2)
+                {
+                    bookFour.update(newID: startingLetter + alphaLabel)
+                }
+                
+                j -= 1
+            }
+            decide = false
+            
+        }
+        else if (decide == false)//Dewey Decimal
+        {
+            let startingNum = String(Int(arc4random_uniform(999)))
+            var decLabel = ""
+            var tempDec = ""
+            
+            
+            var j = 6
+            
+            while (j > 1)
+            {
+                var i = 3
+                while (i > 1)
+                {
+                    tempDec += String(arc4random_uniform(9))
+                    i -= 1
+                }
+                decLabel = tempDec
+                tempDec = ""
+                if(j == 6)
+                {
+                    bookZero.update(newID: startingNum + "." + decLabel)
+                }
+                
+                if(j == 5)
+                {
+                    bookOne.update(newID: startingNum + "." + decLabel)
+                }
+                if(j == 4)
+                {
+                    bookTwo.update(newID: startingNum + "." + decLabel)
+                }
+                if(j == 3)
+                {
+                    bookThree.update(newID: startingNum + "." + decLabel)
+                }
+                if(j == 2)
+                {
+                    bookFour.update(newID: startingNum + "." + decLabel)
+                }
+                
+                j -= 1
+                
+                
+            }
+            decide = true
+        }
     }
     
     @IBAction func checkButton(_ sender: UIButton)
@@ -96,49 +197,49 @@ class ReorderViewController: UIViewController
         {
             if (book.id == books[i].id)
             {
-               book.backgroundColor = .green
+                book.backgroundColor = .green
             }
             i += 1
         }
         
         /*
-        if (array[0] == arrayCreated[0])
-        {
-            bookZero.backgroundColor = .green
-        }
-        
-        if (array[1] == arrayCreated[1])
-            
-        {
-            
-            bookOne.backgroundColor = .green
-            
-        }
-        
-        if (array[2] == arrayCreated[2])
-            
-        {
-            
-            bookTwo.backgroundColor = .green
-            
-        }
-        
-        if (array[3] == arrayCreated[3])
-            
-        {
-            
-            bookThree.backgroundColor = .green
-            
-        }
-        
-        if (array[4] == arrayCreated[4])
-            
-        {
-            
-            bookFour.backgroundColor = .green
-            
-        }
- */
+         if (array[0] == arrayCreated[0])
+         {
+         bookZero.backgroundColor = .green
+         }
+         
+         if (array[1] == arrayCreated[1])
+         
+         {
+         
+         bookOne.backgroundColor = .green
+         
+         }
+         
+         if (array[2] == arrayCreated[2])
+         
+         {
+         
+         bookTwo.backgroundColor = .green
+         
+         }
+         
+         if (array[3] == arrayCreated[3])
+         
+         {
+         
+         bookThree.backgroundColor = .green
+         
+         }
+         
+         if (array[4] == arrayCreated[4])
+         
+         {
+         
+         bookFour.backgroundColor = .green
+         
+         }
+         */
         
     }
     
