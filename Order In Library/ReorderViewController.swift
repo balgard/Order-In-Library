@@ -58,7 +58,7 @@ class ReorderViewController: UIViewController
         books.append(bookTwo)
         books.append(bookThree)
         books.append(bookFour)
-       // fillBookArray()
+        // fillBookArray()
         createBookNames()
     }
     
@@ -88,17 +88,15 @@ class ReorderViewController: UIViewController
         //Do this for every book
         let alphArray = ["A","B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
         
-    
+        
         if (decide == true) //Alphabet
         {
-            let startingLetterNumber =  Int(arc4random_uniform(26))
+            let startingLetterNumber =  Int(arc4random_uniform(UInt32(alphArray.count)))
             let startingLetter = alphArray[startingLetterNumber]
             
             var alphaLabel = ""
-            var j = 6
             var temp = ""
-            
-            while j > 1
+            for book in books
             {
                 var i = 3
                 while i > 1
@@ -109,33 +107,9 @@ class ReorderViewController: UIViewController
                 }
                 alphaLabel = temp
                 temp = ""
-                
-                if(j == 6)
-                {
-                    bookZero.update(newID: startingLetter + alphaLabel)
-                }
-                
-                if(j == 5)
-                {
-                    bookOne.update(newID: startingLetter + alphaLabel)
-                }
-                if(j == 4)
-                {
-                    bookTwo.update(newID: startingLetter + alphaLabel)
-                }
-                if(j == 3)
-                {
-                    bookThree.update(newID: startingLetter + alphaLabel)
-                }
-                if(j == 2)
-                {
-                    bookFour.update(newID: startingLetter + alphaLabel)
-                }
-                
-                j -= 1
+                book.update(newID: startingLetter + alphaLabel)
             }
             decide = false
-            
         }
         else if (decide == false)//Dewey Decimal
         {
@@ -143,10 +117,7 @@ class ReorderViewController: UIViewController
             var decLabel = ""
             var tempDec = ""
             
-            
-            var j = 6
-            
-            while (j > 1)
+            for book in books
             {
                 var i = 3
                 while (i > 1)
@@ -156,31 +127,7 @@ class ReorderViewController: UIViewController
                 }
                 decLabel = tempDec
                 tempDec = ""
-                if(j == 6)
-                {
-                    bookZero.update(newID: startingNum + "." + decLabel)
-                }
-                
-                if(j == 5)
-                {
-                    bookOne.update(newID: startingNum + "." + decLabel)
-                }
-                if(j == 4)
-                {
-                    bookTwo.update(newID: startingNum + "." + decLabel)
-                }
-                if(j == 3)
-                {
-                    bookThree.update(newID: startingNum + "." + decLabel)
-                }
-                if(j == 2)
-                {
-                    bookFour.update(newID: startingNum + "." + decLabel)
-                }
-                
-                j -= 1
-                
-                
+                book.update(newID: startingNum + "." + decLabel)
             }
             decide = true
         }
