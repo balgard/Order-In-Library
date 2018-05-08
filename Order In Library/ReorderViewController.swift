@@ -58,20 +58,19 @@ class ReorderViewController: UIViewController
         books.append(bookTwo)
         books.append(bookThree)
         books.append(bookFour)
-        // fillBookArray()
+        //fillBookArray()
         createBookNames()
     }
     
     func fillBookArray()
     {
         //take all book objects and randomize their order, add to books array, move the book to correct position
+        //might not be necessary with random name generation
         var i = 5
         while (i > 0)
         {
             var randomInt = Int(arc4random_uniform(UInt32(i)))
-            print(randomInt)
             tempArray.append(books[randomInt])
-            //tempArray.last?.id = books[randomInt].text!
             books.remove(at: randomInt)
             i -= 1
         }
@@ -134,60 +133,23 @@ class ReorderViewController: UIViewController
     }
     
     @IBAction func checkButton(_ sender: UIButton)
-        
     {
         var i = 0
-        //optimize with loops
-        //arrayCreated = [bookZero.text!, bookOne.text!, bookTwo.text!, bookThree.text!, bookFour.text!]
-        //remove arrayCreated when fillBookArray is finished
+        var sortedBooks = books
+        sortedBooks.sort()
         for book in books
         {
-            if (book.id == books[i].id)
+            if (book.id == sortedBooks[i].id)
             {
                 book.backgroundColor = .green
             }
+            else
+            {
+                book.backgroundColor = .red
+            }
             i += 1
         }
-        
-        /*
-         if (array[0] == arrayCreated[0])
-         {
-         bookZero.backgroundColor = .green
-         }
-         
-         if (array[1] == arrayCreated[1])
-         
-         {
-         
-         bookOne.backgroundColor = .green
-         
-         }
-         
-         if (array[2] == arrayCreated[2])
-         
-         {
-         
-         bookTwo.backgroundColor = .green
-         
-         }
-         
-         if (array[3] == arrayCreated[3])
-         
-         {
-         
-         bookThree.backgroundColor = .green
-         
-         }
-         
-         if (array[4] == arrayCreated[4])
-         
-         {
-         
-         bookFour.backgroundColor = .green
-         
-         }
-         */
-        
+        firstTap = false
     }
     
     
@@ -195,13 +157,9 @@ class ReorderViewController: UIViewController
     @IBAction func onTapped(_ sender: UITapGestureRecognizer)
         
     {
-        
         var selectedPoint = sender.location(in: self.view)
-        
-        //update order of books in array when moved 
-        
+        //update order of books in array when moved
         if (firstTap == false)
-            
         {
             
             if (bookZero.frame.contains(selectedPoint))
