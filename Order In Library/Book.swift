@@ -8,8 +8,19 @@
 
 import UIKit
 
-class Book: UILabel
+class Book: UILabel, Comparable
 {
+    static func <(lhs: Book, rhs: Book) -> Bool {
+        if(lhs.id < rhs.id)
+        {
+            return true
+        }
+        else
+        {
+            return false
+        }
+    }
+    
     var color = ""
     var id = ""
     
