@@ -213,15 +213,10 @@ class ReorderViewController: UIViewController
             else if (bookThree.frame.contains(selectedPoint))
                 
             {
-                
                 firstString = bookThree.text!
-                
                 bookTapped = 3
-                
                 bookThree.backgroundColor = .blue
-                
                 firstBook = bookThree
-                
                 firstTap = true
                 
             }

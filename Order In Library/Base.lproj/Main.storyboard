@@ -216,10 +216,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bookSpine" translatesAutoresizingMaskIntoConstraints="NO" id="Twf-R5-qN9">
-                                <rect key="frame" x="-208" y="110" width="528" height="386"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hZW-Zb-1ZR" customClass="Book" customModule="Order_In_Library" customModuleProvider="target">
                                 <rect key="frame" x="26" y="274" width="60" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -277,6 +273,10 @@
                                     <action selector="checkButton:" destination="Wuc-nE-dso" eventType="touchUpInside" id="I8k-e8-iPD"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bookSpine-1" translatesAutoresizingMaskIntoConstraints="NO" id="KWc-yr-od5">
+                                <rect key="frame" x="16" y="390" width="109" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
@@ -405,7 +405,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bookSpine" width="183" height="183"/>
+        <image name="bookSpine-1" width="166" height="53"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="FNS-lA-aMn"/>
