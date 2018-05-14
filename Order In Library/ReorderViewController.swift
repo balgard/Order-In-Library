@@ -42,7 +42,7 @@ class ReorderViewController: UIViewController
     
     var bookTapped = -1
     
-    var firstBook = UILabel()
+    var firstBook = Book()
     
     var books = [Book]()
     
@@ -159,115 +159,130 @@ class ReorderViewController: UIViewController
     {
         var selectedPoint = sender.location(in: self.view)
         //update order of books in array when moved
-        if (firstTap == false)
+        
+        for book in books
         {
-            
-            if (bookZero.frame.contains(selectedPoint))
-                
+            if book.frame.contains(sender.location(in: self.view))
             {
-                
-                firstString = bookZero.text!
-                
-                bookTapped = 0
-                
-                bookZero.backgroundColor = .blue
-                
-                firstBook = bookZero
-                
-                firstTap = true
-                
-            }
-                
-            else if (bookOne.frame.contains(selectedPoint))
-                
-            {
-                
-                firstString = bookOne.text!
-                
-                bookTapped = 1
-                
-                bookOne.backgroundColor = .blue
-                
-                firstBook = bookOne
-                
-                firstTap = true
-                
-            }
-                
-            else if (bookTwo.frame.contains(selectedPoint))
-                
-            {
-                
-                firstString = bookTwo.text!
-                
-                bookTapped = 2
-                
-                bookTwo.backgroundColor = .blue
-                
-                firstBook = bookTwo
-                
-                firstTap = true
-                
-            }
-                
-            else if (bookThree.frame.contains(selectedPoint))
-                
-            {
-                firstString = bookThree.text!
-                bookTapped = 3
-                bookThree.backgroundColor = .blue
-                firstBook = bookThree
-                firstTap = true
-                
-            }
-                
-            else if (bookFour.frame.contains(selectedPoint))
-            {
-                firstString = bookFour.text!
-                bookTapped = 4
-                bookFour.backgroundColor = .blue
-                firstBook = bookFour
-                firstTap = true
+                if (firstTap == false)
+                {
+                    firstBook = book
+                    firstString = firstBook.id
+                    firstBook.backgroundColor = .blue
+                }
+                else
+                {
+                    firstBook.update(newID: book.id)
+                    book.update(newID: firstString)
+                    firstBook.backgroundColor = .clear
+                    firstTap = false
+                }
             }
         }
-        else
-        {
-            if (bookZero.frame.contains(selectedPoint))
-            {
-                firstBook.text = bookZero.text
-                bookZero.text = firstString
-                firstBook.backgroundColor = .clear
-                firstTap = false
-            }
-            else if (bookOne.frame.contains(selectedPoint))
-            {
-                firstBook.text = bookOne.text
-                bookOne.text = firstString
-                firstBook.backgroundColor = .clear
-                firstTap = false
-            }
-            else if (bookTwo.frame.contains(selectedPoint))
-            {
-                firstBook.text = bookTwo.text
-                bookTwo.text = firstString
-                firstBook.backgroundColor = .clear
-                firstTap = false
-            }
-            else if (bookThree.frame.contains(selectedPoint))
-            {
-                firstBook.text = bookThree.text
-                bookThree.text = firstString
-                firstBook.backgroundColor = .clear
-                firstTap = false
-            }
-            else if (bookFour.frame.contains(selectedPoint))
-            {
-                firstBook.text = bookFour.text
-                bookFour.text = firstString
-                firstBook.backgroundColor = .clear
-                firstTap = false
-            }
-        }
+        /*if (firstTap == false)
+         {
+         
+         if (bookZero.frame.contains(selectedPoint))
+         
+         {
+         
+         firstBook = bookZero
+         firstBook.backgroundColor = .blue
+         
+         
+         }
+         
+         else if (bookOne.frame.contains(selectedPoint))
+         
+         {
+         
+         firstString = bookOne.text!
+         
+         bookTapped = 1
+         
+         bookOne.backgroundColor = .blue
+         
+         firstBook = bookOne
+         
+         firstTap = true
+         
+         }
+         
+         else if (bookTwo.frame.contains(selectedPoint))
+         
+         {
+         
+         firstString = bookTwo.text!
+         
+         bookTapped = 2
+         
+         bookTwo.backgroundColor = .blue
+         
+         firstBook = bookTwo
+         
+         firstTap = true
+         
+         }
+         
+         else if (bookThree.frame.contains(selectedPoint))
+         
+         {
+         firstString = bookThree.text!
+         bookTapped = 3
+         bookThree.backgroundColor = .blue
+         firstBook = bookThree
+         firstTap = true
+         
+         }
+         
+         else if (bookFour.frame.contains(selectedPoint))
+         {
+         firstString = bookFour.text!
+         bookTapped = 4
+         bookFour.backgroundColor = .blue
+         firstBook = bookFour
+         firstTap = true
+         }
+         }
+         else
+         {
+         if (bookZero.frame.contains(selectedPoint))
+         {
+         firstBook.text = bookZero.text
+         bookZero.text = firstString
+         firstBook.backgroundColor = .clear
+         firstTap = false
+         }
+         else if (bookOne.frame.contains(selectedPoint))
+         {
+         firstBook.text = bookOne.text
+         bookOne.text = firstString
+         firstBook.backgroundColor = .clear
+         firstTap = false
+         }
+         else if (bookTwo.frame.contains(selectedPoint))
+         {
+         firstBook.text = bookTwo.text
+         bookTwo.text = firstString
+         firstBook.backgroundColor = .clear
+         firstTap = false
+         }
+         else if (bookThree.frame.contains(selectedPoint))
+         {
+         firstBook.id = bookThree.id
+         bookThree.id = firstString
+         firstBook.backgroundColor = .clear
+         firstTap = false
+         
+         }
+         else if (bookFour.frame.contains(selectedPoint))
+         {
+         firstBook.text = bookFour.text
+         bookFour.text = firstString
+         firstBook.backgroundColor = .clear
+         firstTap = false
+         }
+         }*/
     }
     @IBAction func goBackTapped(_ sender: UIButton)
     {
