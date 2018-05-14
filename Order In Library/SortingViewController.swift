@@ -80,7 +80,7 @@ class SortingViewController: UIViewController
                     {
                         if wrongAnswers <= 3
                         {
-                            let alert = UIAlertController(title: "Certified", message: nil, preferredStyle: .alert)
+                            let alert = UIAlertController(title: firstName + " " + lastName + " is Certified!", message: nil, preferredStyle: .alert)
                             let alertMessage = UIAlertAction(title: "new game", style: .default)
                             {
                                 (action) -> Void in self.performSegue(withIdentifier: "unwindToLevel", sender: self)
