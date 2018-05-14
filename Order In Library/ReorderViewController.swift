@@ -169,6 +169,7 @@ class ReorderViewController: UIViewController
                     firstBook = book
                     firstString = firstBook.id
                     firstBook.backgroundColor = .blue
+                    firstTap = true
                 }
                 else
                 {
