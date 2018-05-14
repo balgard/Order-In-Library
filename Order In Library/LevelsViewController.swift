@@ -11,6 +11,8 @@ import UIKit
 class LevelsViewController: UIViewController {
     @IBOutlet weak var noviceSortCheck: UIImageView!
     @IBOutlet weak var expertSortCheck: UIImageView!
+    let check = #imageLiteral(resourceName: "check")
+    let xMark = #imageLiteral(resourceName: "x")
     
 
     override func viewDidLoad() {
@@ -18,11 +20,11 @@ class LevelsViewController: UIViewController {
     
         if(sortingCompleted == true)
         {
-            noviceSortCheck.backgroundColor = .green
+            noviceSortCheck.image = check
         }
         else if(sortingCompleted == false)
         {
-            noviceSortCheck.backgroundColor = .red
+            noviceSortCheck.image = xMark
         }
         
 

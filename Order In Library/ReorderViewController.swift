@@ -236,35 +236,35 @@ class ReorderViewController: UIViewController
             {
                 firstBook.text = bookZero.text
                 bookZero.text = firstString
-                firstBook.backgroundColor = .red
+                firstBook.backgroundColor = .clear
                 firstTap = false
             }
             else if (bookOne.frame.contains(selectedPoint))
             {
                 firstBook.text = bookOne.text
                 bookOne.text = firstString
-                firstBook.backgroundColor = .red
+                firstBook.backgroundColor = .clear
                 firstTap = false
             }
             else if (bookTwo.frame.contains(selectedPoint))
             {
                 firstBook.text = bookTwo.text
                 bookTwo.text = firstString
-                firstBook.backgroundColor = .red
+                firstBook.backgroundColor = .clear
                 firstTap = false
             }
             else if (bookThree.frame.contains(selectedPoint))
             {
                 firstBook.text = bookThree.text
                 bookThree.text = firstString
-                firstBook.backgroundColor = .red
+                firstBook.backgroundColor = .clear
                 firstTap = false
             }
             else if (bookFour.frame.contains(selectedPoint))
             {
                 firstBook.text = bookFour.text
                 bookFour.text = firstString
-                firstBook.backgroundColor = .red
+                firstBook.backgroundColor = .clear
                 firstTap = false
             }
         }
