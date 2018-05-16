@@ -20,11 +20,13 @@ class SortingViewController: UIViewController
     @IBOutlet weak var bookFiveLabel: UILabel!
     @IBOutlet weak var bookSixLabel: UILabel!
     @IBOutlet weak var bookForSorting: Book!
+    @IBOutlet weak var progressLabel: UILabel!
     
     var bookTitles = [String]()
     var currentPosition = 0
     var boxesArray = [UILabel]()
     var wrongAnswers = 0
+    var progression = 0
     
     override func viewDidLoad()
     {
@@ -80,6 +82,7 @@ class SortingViewController: UIViewController
                     {
                         if wrongAnswers <= 3
                         {
+                            progressLabel.text = "10"
                             let alert = UIAlertController(title: firstName + " " + lastName + " is Certified!", message: nil, preferredStyle: .alert)
                             let alertMessage = UIAlertAction(title: "new game", style: .default)
                             {
@@ -109,11 +112,15 @@ class SortingViewController: UIViewController
                     }
                     else
                     {
+                        bookForSorting.textColor = .black
                         tapHelper()
+                        progression += 1
+                        progressLabel.text = String(progression)
                     }
                 }
                 else
                 {
+                    bookForSorting.textColor = .red
                     wrongAnswers += 1
                 }
             }
