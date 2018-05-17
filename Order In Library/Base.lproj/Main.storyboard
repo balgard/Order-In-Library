@@ -520,7 +520,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jrV-3R-E5G">
-                                <rect key="frame" x="302" y="627" width="11" height="21"/>
+                                <rect key="frame" x="296" y="626" width="17" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -568,7 +568,7 @@
         <image name="x" width="600" height="408"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ZsX-ty-ycG"/>
+        <segue reference="q9J-jp-2sc"/>
         <segue reference="Oju-bZ-KE5"/>
     </inferredMetricsTieBreakers>
 </document>
