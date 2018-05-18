@@ -33,7 +33,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="62" id="3CI-D1-dTc"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="25"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -571,7 +571,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="FNS-lA-aMn"/>
-        <segue reference="ZsX-ty-ycG"/>
+        <segue reference="Guj-P1-RgX"/>
         <segue reference="Oju-bZ-KE5"/>
     </inferredMetricsTieBreakers>
 </document>
