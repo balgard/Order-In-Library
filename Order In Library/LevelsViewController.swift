@@ -22,10 +22,20 @@ class LevelsViewController: UIViewController {
         {
             noviceSortCheck.image = check
         }
-        else if(sortingCompleted == false)
+        else
         {
             noviceSortCheck.image = xMark
         }
+        
+        if(reorderingCompleted == true)
+        {
+            expertSortCheck.image = check
+        }
+        else
+        {
+            expertSortCheck.image = xMark
+        }
+        
         
 
     }

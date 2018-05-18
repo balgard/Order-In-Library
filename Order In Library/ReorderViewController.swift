@@ -12,6 +12,8 @@
 
 //
 
+var reorderingCompleted = BooleanLiteralType()
+
 var decide = true
 
 import UIKit
@@ -31,6 +33,7 @@ class ReorderViewController: UIViewController
     
     @IBOutlet weak var bookFour: Book!
     
+    @IBOutlet weak var progressLabel: UILabel!
     
     var array = ["0","1","2","3","4"]
     
@@ -48,6 +51,8 @@ class ReorderViewController: UIViewController
     
     var tempArray = [Book]()
     
+    var numGreen = 0
+    var rounds = 0
     
     
     override func viewDidLoad()
@@ -142,13 +147,46 @@ class ReorderViewController: UIViewController
             if (book.id == sortedBooks[i].id)
             {
                 book.backgroundColor = .green
+                numGreen += 1
             }
             else
             {
                 book.backgroundColor = .red
+                numGreen = 0
             }
+            
+            print(numGreen)
+
             i += 1
         }
+        
+        if numGreen == 5
+        {
+            createBookNames()
+            numGreen = 0
+            for book in books
+            {
+                book.backgroundColor = .clear
+            }
+            rounds += 1
+            progressLabel.text = String(rounds)
+            
+        }
+        
+        numGreen = 0
+        
+        if rounds == 3
+        {
+            let alert = UIAlertController(title: firstName + " " + lastName + " is Certified!", message: nil, preferredStyle: .alert)
+            let alertMessage = UIAlertAction(title: "new game", style: .default)
+            {
+                (action) -> Void in self.performSegue(withIdentifier: "unwindToLevel", sender: self)
+            }
+            alert.addAction(alertMessage)
+            reorderingCompleted = true
+            present(alert, animated: true, completion: nil)
+        }
+        
         firstTap = false
     }
     

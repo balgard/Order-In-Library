@@ -227,7 +227,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Wuc-nE-dso" kind="show" id="BkP-jz-n37"/>
+                                    <segue destination="Wuc-nE-dso" kind="show" identifier="unwind" id="BkP-jz-n37"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="x" translatesAutoresizingMaskIntoConstraints="NO" id="IJy-aQ-EvR">
@@ -260,11 +260,12 @@
                     <connections>
                         <outlet property="expertSortCheck" destination="VHy-xc-Znj" id="Dmz-Xb-Y18"/>
                         <outlet property="noviceSortCheck" destination="IJy-aQ-EvR" id="Et8-C7-bXs"/>
+                        <segue destination="aqL-oT-dfv" kind="show" id="TZp-1M-xUY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="chq-Ky-ik5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="900" y="125.4872563718141"/>
+            <point key="canvasLocation" x="914" y="305"/>
         </scene>
         <!--Reorder View Controller-->
         <scene sceneID="dRH-G8-qk4">
@@ -279,7 +280,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Back" image="backarrow"/>
                                 <connections>
-                                    <segue destination="aVc-lQ-Mk2" kind="show" id="ZsX-ty-ycG"/>
+                                    <segue destination="aVc-lQ-Mk2" kind="show" identifier="unwindToLevel" id="ZsX-ty-ycG"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bookshelf2" translatesAutoresizingMaskIntoConstraints="NO" id="xLq-NF-RR9">
@@ -361,7 +362,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Hz-j0-0z2">
-                                <rect key="frame" x="302" y="626" width="11" height="21"/>
+                                <rect key="frame" x="299" y="623" width="14" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -388,6 +389,7 @@
                         <outlet property="bookThree" destination="qsv-dh-vq2" id="D5w-SC-fxM"/>
                         <outlet property="bookTwo" destination="M2H-ZM-h7d" id="GU8-c1-Msn"/>
                         <outlet property="bookZero" destination="hZW-Zb-1ZR" id="CK3-pY-KOP"/>
+                        <outlet property="progressLabel" destination="6Hz-j0-0z2" id="VD9-jo-md8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V0K-37-a5q" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -397,7 +399,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="900" y="841"/>
+            <point key="canvasLocation" x="914" y="1127"/>
         </scene>
         <!--Sorting View Controller-->
         <scene sceneID="dRo-O3-Ane">
@@ -568,7 +570,8 @@
         <image name="x" width="600" height="408"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="q9J-jp-2sc"/>
+        <segue reference="FNS-lA-aMn"/>
+        <segue reference="ZsX-ty-ycG"/>
         <segue reference="Oju-bZ-KE5"/>
     </inferredMetricsTieBreakers>
 </document>
